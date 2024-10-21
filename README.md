@@ -19,33 +19,7 @@ PPL 已支持编程的算能芯片列表如下：
 
 选择 release 分支的 Tags 下载 PPL 开发包。
 
-下载本工程开发包后，需要在 docker 中使用。
-
-* 从[dockerhub](https://hub.docker.com/r/sophgo/tpuc_dev)下载所需的镜像。
-
-``` shell
-docker pull sophgo/tpuc_dev:latest
-
-```
-
-* 如果docker拉取失败，可通过以下方式进行下载：
-
-``` shell
-wget https://sophon-file.sophon.cn/sophon-prod-s3/drive/24/06/14/12/sophgo-tpuc_dev-v3.2_191a433358ad.tar.gz
-
-docker load -i sophgo-tpuc_dev-v3.2_191a433358ad.tar.gz
-```
-
-* 创建所需镜像：
-
-``` shell
-# myname1234 just a example, you can set your own name
-docker run --privileged --name myname1234 -v $PWD:/workspace -it sophgo/tpuc_dev:latest
-```
-
-容器建立后，代码在docker中的目录为`/workspace/ppl_*`。
-
-下面是PPL开发包的目录结构：
+下面是 PPL 开发包的目录结构：
 
 ``` shell
     ├── bin/
